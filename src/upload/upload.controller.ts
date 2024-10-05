@@ -25,7 +25,7 @@ export class UploadController {
   uploadFileAndPassValidation(
     @UploadedFile(
       new ParseFilePipeBuilder()
-        .addMaxSizeValidator({ maxSize: 1000 })
+        .addMaxSizeValidator({ maxSize: 100000 })
         .addFileTypeValidator({ fileType: 'jpeg' })
         .build({
           errorHttpStatusCode: 400,
